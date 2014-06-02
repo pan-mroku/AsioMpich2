@@ -1,6 +1,8 @@
 #include <iostream>
 #include <asio.hpp>
 
+//@TODO: wysyłać serializowalny przez boosta obiekt (np tablica o zmiennych wymiarach)
+
 int main()
 {
   try 
