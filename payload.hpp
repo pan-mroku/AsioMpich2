@@ -11,7 +11,9 @@ class Payload
 public:
   std::vector<int> Table;
   int X,Y;
+
   Payload();
+  void Work();
 
   friend std::ostream& operator<<(std::ostream& out, const Payload& p);
 

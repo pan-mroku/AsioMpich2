@@ -11,6 +11,13 @@ Payload::Payload()
       Table[x*Y+y]=x*Y+y;
 }
 
+void Payload::Work()
+{
+  for (int x :boost::irange(0,X))
+    for(int y :boost::irange(0,Y))
+      Table[x*Y+y]*=-1;
+}
+
 std::ostream& operator<<(std::ostream& out, const Payload& p)
 {
   out<<"x: "<<p.X<<" y: "<<p.Y<<std::endl;
