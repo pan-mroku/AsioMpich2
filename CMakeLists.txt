@@ -23,3 +23,10 @@ ADD_EXECUTABLE(${PROJECT_NAME}_send
         )
 
 TARGET_LINK_LIBRARIES(${PROJECT_NAME}_send ${LIBS})
+
+ADD_EXECUTABLE(${PROJECT_NAME}_test
+  payload.hpp
+  payload.cpp
+  test.cpp
+  )
+TARGET_LINK_LIBRARIES(${PROJECT_NAME}_test ${LIBS})
