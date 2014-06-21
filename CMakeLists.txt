@@ -4,13 +4,13 @@ PROJECT(AsioMpich2)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -O3")
 
-FIND_PACKAGE(Boost REQUIRED COMPONENTS system)
+FIND_PACKAGE(Boost REQUIRED COMPONENTS system serialization)
 
 #INCLUDE_DIRECTORIES(  ${ASIO_INCLUDE_DIR}  .  )
 
 #LINK_DIRECTORIES(  ${ASIO_LIBRARY_DIR}  )
 
-SET(LIBS boost_system pthread)
+SET(LIBS boost_serialization boost_system)
 
 ADD_EXECUTABLE(${PROJECT_NAME}_client
   client.cpp
@@ -29,4 +29,4 @@ ADD_EXECUTABLE(${PROJECT_NAME}_test
   payload.cpp
   test.cpp
   )
-TARGET_LINK_LIBRARIES(${PROJECT_NAME}_test ${LIBS})
+TARGET_LINK_LIBRARIES(${PROJECT_NAME}_test ${LIBS} )
