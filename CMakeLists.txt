@@ -4,9 +4,9 @@ PROJECT(AsioMpich2)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -O3")
 
-FIND_PACKAGE(Boost REQUIRED COMPONENTS system serialization)
+FIND_PACKAGE(Boost REQUIRED COMPONENTS system serialization thread)
 
-SET(LIBS boost_serialization boost_system)
+SET(LIBS boost_serialization boost_system boost_thread)
 
 SET(HEADERS payload.hpp)
 SET(SOURCES payload.cpp)
